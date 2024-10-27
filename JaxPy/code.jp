@@ -1,0 +1,88 @@
+procedure func1 (a: number, b: string): number {
+  return 2;
+}
+?let a: number = "hello\nworld";
+let a: string = "hello\nworld";
+\nt
+
+
+classes C1 {
+  method m2(a: string): void {return;}
+}
+
+let a: number = 4 / 7 - 3;
+
+interface E {
+    method GetArea(): void;
+}
+
+interfaces B {
+    method GetArea(c: string): number;
+}
+
+class Car implements E {
+  wheel: number;
+  method m1(): number {
+    if (1==2) {
+      const a: number = 2;
+    } else {
+      return c;
+    }
+  }
+  method GetArea(): void {}
+}
+ 
+let a: number = func1(1, "abc", 3);
+
+
+procedurefunc2(a: number): number {
+  let b: number[];
+  return a;
+}
+
+let newCar: Car;
+let a: number = z;
+
+procedurefunc3(): void {
+  let a: number[][];
+}
+
+let 7b: string = "a" + "b";
+constant d: string = "abcdefghi";
+
+procedurefunc4(): number {
+    #empty
+}
+
+until (1==2) {
+  continue;
+  break;
+}
+
+until (func4() != 2) {
+
+}
+
+func new_func(): supra {
+  let supra: Supra;
+  return supra;
+}
+
+func2(a);
+
+if (z > a) {  
+  #return;
+}
+
+class Wheel {
+  
+}
+
+procedure func5 (): number {
+
+}
+
+let n1: number = func5();
+
+let car1: Car = new Car(a);
+#let b: number = abcd();
