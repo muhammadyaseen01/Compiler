@@ -4,7 +4,6 @@ from Utils.match_terminal import match_terminal
 from Lexer.constants import *
 from Semantic.helpers import *
 import Utils.config as config
-# from Parser.parser import *
 
 def interface_defintion() -> bool:
     global config

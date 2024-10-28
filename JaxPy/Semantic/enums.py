@@ -11,7 +11,7 @@ class Main_Table_Access_Modifier(Enum):
 
 class Main_Table_Category(Enum):
     DEFAULT = "DEFAULT"
-    SEALED = "SEALED"
+    FINAL = "FINAL"
 
 class Data_Table_Access_Modifier(Enum):
     PRIVATE = "PRIVATE"

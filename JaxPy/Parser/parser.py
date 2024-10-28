@@ -1,7 +1,7 @@
 from typing import List
 from Lexer.constants import *
-# from Utils.select_rule import select_rule
-# from Utils.match_terminal import match_terminal
+from Utils.select_rule import select_rule
+from Utils.match_terminal import match_terminal
 
 from Parser.variable_declaration import var_declaration
 from Parser.variable_assignment import variable_assignment
@@ -9,7 +9,7 @@ from Parser.if_statement import if_statement
 from Parser.loop import loop
 from Parser.function_definition import function_definition
 from Parser.return_statement import return_statement
-from Parser.exit_skip import exit_skip
+from Parser.break_continue import break_continue
 from Parser.class_definition import class_definition
 from Parser.interface_definition import interface_defintion
 from Parser.expression import *
@@ -42,7 +42,7 @@ def S() -> bool:
         return True
     return False
 
-def MST() -> bool:
+def MST() -> bool: #multiple statements
     if select_rule([LET_CONST, IF, UNTIL, PROCEDURE, RETURN, ASSIGN, BREAK_CONTINUE, THIS, IDENTIFIER, INTEGER_CONSTANT, FLOAT_CONSTANT, STRING_CONSTANT, BOOL_CONSTANT, NOT]):
         if SST():
             if MST():
@@ -51,7 +51,7 @@ def MST() -> bool:
         return True
     return False
 
-def SST() -> bool:
+def SST() -> bool: #single statements
     if select_rule([LET_CONST]):
         if var_declaration():
             if match_terminal(SEMICOLON):
@@ -74,7 +74,7 @@ def SST() -> bool:
             if match_terminal(SEMICOLON):
                 return True  
     elif select_rule([BREAK_CONTINUE]):
-        if exit_skip():
+        if break_continue():
             if match_terminal(SEMICOLON):
                 return True   
     elif select_rule(first_of_OE):

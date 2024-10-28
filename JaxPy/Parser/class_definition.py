@@ -11,7 +11,7 @@ import Utils.config as config
 
 def class_definition() -> bool:
     global config
-    if select_rule([SEALED, CLASS]):
+    if select_rule([FINAL, CLASS]):
         access_modifier = Main_Table_Access_Modifier.GENERAL
         parent = []
         category = class_category()
@@ -35,9 +35,9 @@ def class_definition() -> bool:
     return False
 
 def class_category():
-    if select_rule([SEALED]):
-        if match_terminal(SEALED):
-            return Main_Table_Category.SEALED
+    if select_rule([FINAL]):
+        if match_terminal(FINAL):
+            return Main_Table_Category.FINAL
     elif select_rule([CLASS]):
         return Main_Table_Category.DEFAULT
     return False
@@ -65,8 +65,8 @@ def inheritance(parent: List[str]) -> bool:
                     if row.access_modifier == Main_Table_Access_Modifier.PRIVATE:
                         print(f"{name} cannot extend a Private Class")
                         return False
-                    if row.category == Main_Table_Category.SEALED:
-                        print(f"{name} cannot extend a Sealed Class")
+                    if row.category == Main_Table_Category.FINAL:
+                        print(f"{name} cannot extend a FINAL Class")
                         return False
                     parent.append(name)
                     return True

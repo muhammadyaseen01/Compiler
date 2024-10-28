@@ -1,12 +1,15 @@
 procedure func1 (a: number, b: string): number {
   return 2;
 }
-?let a: number = "hello\nworld";
-let a: string = "hello\nworld";
+#let a:string = "hello";
+#let a:number = 2;
+#let a: number = "hello\nworld";
+?
+let a: number = "hello\nworld";
 \nt
+?
 
-
-classes C1 {
+class C1 {
   method m2(a: string): void {return;}
 }
 
@@ -16,7 +19,7 @@ interface E {
     method GetArea(): void;
 }
 
-interfaces B {
+interface B {
     method GetArea(c: string): number;
 }
 
@@ -26,7 +29,7 @@ class Car implements E {
     if (1==2) {
       const a: number = 2;
     } else {
-      return c;
+      #return c;
     }
   }
   method GetArea(): void {}
@@ -35,23 +38,24 @@ class Car implements E {
 let a: number = func1(1, "abc", 3);
 
 
-procedurefunc2(a: number): number {
+procedure func2(a: number): number {
   let b: number[];
   return a;
 }
 
 let newCar: Car;
-let a: number = z;
+#let a: number = z;
 
-procedurefunc3(): void {
+procedure func3(): void {
   let a: number[][];
 }
 
-let 7b: string = "a" + "b";
-constant d: string = "abcdefghi";
+#let 7b: string = "a" + "b";
+#constant d: string = "abcdefghi";
+const d: string = "abcdefghi";
 
-procedurefunc4(): number {
-    #empty
+procedure func4(): number {
+    const a: number = 4;
 }
 
 until (1==2) {
@@ -63,26 +67,33 @@ until (func4() != 2) {
 
 }
 
-func new_func(): supra {
-  let supra: Supra;
-  return supra;
+procedure new_func(): Car {
+  let car: Car;
+  return car;
 }
 
 func2(a);
 
+let z:number = 3;
 if (z > a) {  
-  #return;
+  #z return;
 }
 
 class Wheel {
   
 }
 
+let car1: Car = new Car(a);
 procedure func5 (): number {
 
 }
 
 let n1: number = func5();
 
-let car1: Car = new Car(a);
-#let b: number = abcd();
+until (1==2) {
+  if(2 == 2){
+    continue;
+  }else{
+    break;
+  }
+}

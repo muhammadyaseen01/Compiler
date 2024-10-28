@@ -48,8 +48,8 @@ valid_words = {
         THIS: [
             "this"
         ],
-        ATRATE: [
-          "@"
+        HASH: [
+          "#"
         ],
         METHOD: [
             "method"
